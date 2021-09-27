@@ -10,12 +10,37 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public void clickFunction(View view){
-        Log.i("Info", "Button pressed><");
-        EditText myTextField = (EditText) findViewById(R.id.DAtextbox);
-        String str = myTextField.getText().toString();
-        Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG).show();
-        goToActivity2(str);
+    public void clickadd(View view){
+        EditText myTextField1 = (EditText) findViewById(R.id.textoperand1);
+        EditText myTextField2 = (EditText) findViewById(R.id.textoperand2);
+        double ope1 = Double.parseDouble(myTextField1.getText().toString());
+        double ope2 = Double.parseDouble(myTextField2.getText().toString());
+        double res = ope1 + ope2;
+        goToActivity2(String.valueOf((res)));
+    }
+    public void clicksub(View view){
+        EditText myTextField1 = (EditText) findViewById(R.id.textoperand1);
+        EditText myTextField2 = (EditText) findViewById(R.id.textoperand2);
+        double ope1 = Double.parseDouble(myTextField1.getText().toString());
+        double ope2 = Double.parseDouble(myTextField2.getText().toString());
+        double res = ope1 - ope2;
+        goToActivity2(String.valueOf((res)));
+    }
+    public void clickmult(View view){
+        EditText myTextField1 = (EditText) findViewById(R.id.textoperand1);
+        EditText myTextField2 = (EditText) findViewById(R.id.textoperand2);
+        double ope1 = Double.parseDouble(myTextField1.getText().toString());
+        double ope2 = Double.parseDouble(myTextField2.getText().toString());
+        double res = ope1 * ope2;
+        goToActivity2(String.valueOf((res)));
+    }
+    public void clickdiv(View view){
+        EditText myTextField1 = (EditText) findViewById(R.id.textoperand1);
+        EditText myTextField2 = (EditText) findViewById(R.id.textoperand2);
+        double ope1 = Double.parseDouble(myTextField1.getText().toString());
+        double ope2 = Double.parseDouble(myTextField2.getText().toString());
+        double res = ope1 / ope2;
+        goToActivity2(String.valueOf((res)));
     }
     public void goToActivity2(String s){
         Intent intent = new Intent(this, MainActivity2.class);

@@ -8,10 +8,10 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:textSize="20dp"
         android:layout_width="160dp"
         android:layout_height="90dp"
         android:layout_marginTop="218dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
